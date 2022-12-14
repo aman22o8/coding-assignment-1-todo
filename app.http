@@ -1,0 +1,94 @@
+//API1
+//SCI-1
+GET http://localhost:3010/todos/?status=TO%20DO
+
+###
+//SCI-2
+GET http://localhost:3010/todos/?priority=HIGH
+
+###
+//SCI-3
+GET http://localhost:3010/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+//SCI-4
+GET http://localhost:3010/todos/?search_q=Buy
+
+###
+//SCI-5
+
+GET http://localhost:3010/todos/?category=WORK&status=DONE
+
+###
+//SCI-6
+
+GET http://localhost:3010/todos/?category=LEARNING&priority=HIGH
+
+###
+GET http://localhost:3010/todos/?category=LEARNING
+
+###
+//API 2
+GET http://localhost:3010/todos/2/
+
+###
+//API 3
+GET http://localhost:3010/agenda/?date=2021-1-12
+
+###
+///API4
+POST http://localhost:3010/todos/
+Content-Type: application/json
+
+{
+ "id": 15,
+ "todo": "AMAN event3",
+ "priority": "HIGH",
+ "status": "IN PROGRESS",
+ "category": "HOME",
+ "dueDate": "2022-12-30"
+}
+
+###
+//API 5
+//SCI 1
+PUT http://localhost:3010/todos/1/
+Content-Type: application/json
+
+{ "status": "DONE" }
+
+###
+//SCI 2
+PUT http://localhost:3010/todos/1/
+Content-Type: application/json
+
+{ "priority": "LOW" }
+
+###
+//SCI 3
+PUT http://localhost:3010/todos/1/
+Content-Type: application/json
+
+{
+"todo": "Clean the garden"
+}
+
+###
+//SCI 4
+PUT http://localhost:3010/todos/1/
+Content-Type: application/json
+
+{ "category": "HOME" }
+
+
+###
+//SCI 5
+PUT http://localhost:3010/todos/1/
+Content-Type: application/json
+
+{ "dueDate": "2021-01-12" }
+
+###
+//API 6
+
+DELETE http://localhost:3010/todos/7/
